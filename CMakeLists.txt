@@ -5,5 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(GameMacros
         src/main.cpp
-        src/KeyCommands.h
-        src/KeyCommands.cpp)
+        src/KeyEvents.h
+        src/KeyEvents.cpp
+        src/Event.h
+        src/Event.cpp)
