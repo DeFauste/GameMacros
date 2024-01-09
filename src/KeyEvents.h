@@ -7,11 +7,11 @@
 
 class KeyEvents {
  private:
-  unsigned int _mainKey;
+  int _mainKey ;
   std::vector<Event*> _vEvent;
  public:
-  KeyEvents(unsigned int mainKey, std::vector<Event*> vEvent);
-  unsigned int getMainKey() const;
+  KeyEvents(int mainKey, std::vector<Event*> vEvent);
+  int getMainKey();
   std::vector<Event*> getArrEvent();
 };
 

@@ -6,6 +6,6 @@ int ButtonEvent::getKey() const {
 int Event::getType() const {
   return _typeEvent;
 }
-unsigned int TimerEvent::getSleepTime() {
+unsigned int TimerEvent::getSleepTime() const {
   return _sleepTime;
 }

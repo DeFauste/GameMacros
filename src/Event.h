@@ -7,11 +7,9 @@ enum TypeEvent {
 /*базовый класс родительский класс для кнопок и таймеров*/
 class Event {
  private:
-  int _typeEvent = 0;
+  int _typeEvent;
 
  public:
-
-  Event() = default;
   explicit Event(TypeEvent type) : _typeEvent(type) {};
   int getType() const;
 };
@@ -26,9 +24,9 @@ class ButtonEvent : public Event {
 };
 class TimerEvent: public Event {
  private:
-  unsigned int _sleepTime = 1000;
+  unsigned int _sleepTime;
  public:
   explicit TimerEvent(unsigned int sleepTime): _sleepTime(sleepTime*1000), Event(times){};
-  unsigned int getSleepTime();
+  unsigned int getSleepTime() const;
 };
 #endif //GAMEMACROS_EVENT_H
