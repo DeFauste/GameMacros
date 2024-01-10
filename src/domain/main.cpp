@@ -76,15 +76,15 @@ LRESULT __stdcall HookCallback(int nCode, WPARAM wParam, LPARAM lParam) {
 }
 
 int main() {
-  ShowWindow(FindWindowA("ConsoleWindowClass", NULL), 1);
+    ShowWindow(FindWindowA("ConsoleWindowClass", NULL), 1);
 
-  if (!(hook = SetWindowsHookExA(WH_KEYBOARD_LL, HookCallback, NULL, 0))) {
-	MessageBox(NULL, "Nope", "Error", MB_ICONERROR);
-  }
+    if (!(hook = SetWindowsHookExA(WH_KEYBOARD_LL, HookCallback, NULL, 0))) {
+        MessageBox(NULL, "Nope", "Error", MB_ICONERROR);
+    }
 
-  MSG message;
-  while (true) {
-	GetMessage(&message, NULL, 0, 0);
-  }
-  return 0;
+    MSG message;
+    while (true) {
+        GetMessage(&message, NULL, 0, 0);
+    }
+    return 0;
 }
